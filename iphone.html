@@ -1,0 +1,60 @@
+<html>
+	<head>
+		<title>GScript BASIC</title>
+		<meta name="apple-mobile-web-app-capable" content="yes"/>
+		<meta name="viewport" content="width=160, user-scalable=no"/>
+		<link rel="apple-touch-icon" href="/gsbasic/apple-touch-icon.png"/>
+		<style>
+			body {
+				color: white;
+				background-color: blue;
+			}
+		</style>
+		<script>
+            function loadCombo() {
+            	var file = document.getElementById("combo").value;       	
+				document.location.href = "runiphone.html?file=" + file;                
+            }
+   		</script>
+	</head>
+	<body>
+		<div align="middle">
+			<h2>GScript BASIC</h2>
+			Applesoft BASIC<br>
+			for the Web<br><br>
+			Please select a script
+			<select id="combo" onChange="loadCombo()">
+				<option value="home">Home</option>
+				<optgroup label="Sample Scripts">
+					<option value="gs">Apple IIGS</option>
+					<option value="gscolors">Apple IIGS Colors</option>
+					<option value="gspics">Apple IIGS Pictures</option>
+					<option value="ball">Bouncing Ball</option>
+					<option value="colors">Color Names</option>
+					<option value="demo">Demo</option>
+					<option value="hope">Hope</option>
+					<option value="pattern">Pattern</option>
+					<option value="space">Space</option>
+				</optgroup>
+				<optgroup label="Lores Scripts">
+					<option value="apple">Apple ][ Forever</option>
+					<option value="birthday">Birthday</option>
+					<option value="brainy">Brainy</option>
+					<option value="lrdemo">Demo</option>
+					<option value="kaleidoscope">Kaleidoscope</option>
+					<option value="lrcolors">Lores Colors</option>
+					<option value="night">Night</option>
+					<option value="lrstars">Stars</option>
+					<option value="pong">Pong Demo</option>
+					<option value="rndlores">Random Painter</option>
+				</optgroup>
+			</select>
+			<br><br>
+			<small>
+				By Lim Thye Chean<br>
+				http://virtualgs.larwe.com<br><br><br>
+				Click on the title to return to home page.
+			</small>
+		</div>
+	</body>
+</html>

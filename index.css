@@ -1,0 +1,26 @@
+body {
+	margin: auto;
+	color: white;
+	background-color: blue;
+	font-family: courier, monospace;
+}
+
+#menu {
+	padding-left: 10; 
+	background-color:black;
+}
+
+#canvasArea {
+	margin-top: 5;
+ 	margin-left: 8;
+ 	margin-right: 5;
+ 	background-color: blue;
+}
+
+#scriptArea { 
+	margin-top: 5;
+	color: white;
+	background-color: blue; 
+	font-family: courier, monospace;
+	font-size: 13;
+ }

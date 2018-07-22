@@ -1,0 +1,62 @@
+<html>
+	<head>
+		<title>GScript BASIC</title>
+		<link rel="stylesheet" href="index.css">
+		<script src="index.js"></script>
+	</head>
+	<body onload="run('home')">
+		<div id="menu">
+			<small>Script</small>			
+			<select id="scripts" onChange="loadScript()">
+				<option value="home">Home</option>
+				<option value="user">User Script</option>
+				<optgroup label="Hires Scripts">
+					<option value="gs">Apple IIGS</option>
+					<option value="ball">Bouncing Ball</option>
+					<option value="ctyper">Crazy Typer</option>
+					<option value="demo">Demo</option>
+					<option value="doodle">Doodle</option>
+					<option value="gspics">GS Pictures</option>
+					<option value="hope">Hope</option>
+					<option value="pattern">Pattern</option>
+					<option value="space">Space</option>
+				</optgroup>
+				<optgroup label="Lores Scripts">
+					<option value="apple">Apple ][ Forever</option>
+					<option value="birthday">Birthday</option>
+					<option value="brainy">Brainy</option>
+					<option value="duet">Duet</option>
+					<option value="kaleidoscope">Kaleidoscope</option>
+					<option value="lrdemo">Lores Demo</option>
+					<option value="lrdoodle">Lores Doodle</option>
+					<option value="night">Night</option>
+					<option value="rndlores">Random Painter</option>
+					<option value="lrstars">Stars</option>
+					<option value="pong">Pong Demo</option>
+				</optgroup>
+			</select>
+			<input type="button" value="New" onclick="newScript()">
+			<input type="button" value="Save" onclick="saveScript()">
+			<input type="button" value="Run" onclick="runScript()">
+			&nbsp;
+			<small>Command</small>
+			<input type="button" value="General" onclick="run('commands/general')">
+			<input type="button" value="Text" onclick="run('commands/text')">
+			<input type="button" value="Hires" onclick="run('commands/hires')">
+			<input type="button" value="Lores" onclick="run('commands/lores')">
+			&nbsp;
+			<small>Color</small>
+			<input type="button" value="Names" onclick="run('colors/colors')">
+			<input type="button" value="Hires" onclick="run('colors/gscolors')">
+			<input type="button" value="Lores" onclick="run('colors/lrcolors')">
+			&nbsp;
+			<input type="button" value="About" onclick="run('readme')">
+		</div>
+		<table cellspacing="0" cellpadding="0">
+			<tr style="vertical-align:top">
+				<td align="middle"><textarea id="scriptArea" rows="35" cols="40"></textarea></td>
+				<td><iframe id="canvasArea" frameborder="0" width="640" height="500" scrolling="no"></iframe></td>
+			</tr>
+		</table>
+	</body>
+</html>

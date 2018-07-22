@@ -1,0 +1,26 @@
+body {
+	margin: auto;
+    color: white;
+	background-color: blue;
+	font-family: courier, monospace;
+	font-size: 20;
+}
+
+a { 
+	color: white;
+	font-family: courier, monospace;
+	font-size: 20;
+	text-decoration:none;
+}
+
+.normal {
+	font-family: courier, monospace;
+	font-size: 20;
+}
+
+.inverse {
+	color: blue;
+	background-color: white;
+	font-family: courier, monospace;
+	font-size: 20;
+}

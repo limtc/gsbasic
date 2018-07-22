@@ -1,0 +1,59 @@
+<html>
+	<head>
+  		<title>GScript BASIC</title>
+		<meta name="apple-mobile-web-app-capable" content="yes"/>
+		<meta name="viewport" content="width=640, user-scalable=no"/>
+		<link rel="stylesheet" href="iphone.css">
+		<script src="gsbasic.js"></script>
+	</head>
+	<body>
+		<div align="middle">
+			<br><a onclick="document.location.href='iphone.html'"><h1>GScript BASIC</h1></a><br>
+		</div>
+		<script>
+			function getQuery(variable) {
+				var query = window.location.search.substring(1);
+			  	var vars = query.split("&");
+
+			  	for (var i = 0; i < vars.length; i++) {
+			    	var pair = vars[i].split("=");
+			    	if (pair[0] == variable)
+			      		return pair[1];
+			  	}
+			  
+			  	return null;
+			}
+			
+			function importScript(url) {
+				var request = new XMLHttpRequest();
+		
+				if (request) {
+					request.open("GET", url, true);
+			
+					request.onreadystatechange = function() {
+						if (request.readyState == 4)
+							evalScript(request.responseText);
+					};
+			
+					request.send(null);
+				}
+			}
+
+			onload = function() {
+				var file = getQuery("file");
+			
+				if (file != null && file.length > 0) {
+					if (file.indexOf("http") < 0)
+						file = "scripts/" + file;
+					
+					if (file.indexOf(".js") < 0)
+						file += ".js";
+	
+					importScript(file);
+				}
+				else
+				   document.writeln("Please provide a script name.");
+			}
+		</script>
+	</body>
+</html>
